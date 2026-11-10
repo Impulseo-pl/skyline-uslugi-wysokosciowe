@@ -1940,3 +1940,53 @@ html.menu-open .nav{transform:none!important;background:transparent}
 .nav .nav-links{padding-right:clamp(1.5rem,9vw,9rem)}
 @media(max-width:680px){.nav .nav-phone{font-size:.74rem;padding:.5rem .8rem}.nav .nav-links a.btn-accent{width:auto}}
 @media(max-width:380px){.nav .nav-phone{display:none}}
+
+/* === HERO jak u Klindworth: jasne tło, tekst z lewej, zdjęcie w rombie z prawej; pigułka menu na środku (10.11.2026, druga runda) === */
+.hero-fach{background:var(--paper);min-height:max(100svh,640px);overflow:hidden;align-items:center}
+.hero-fach::after{display:none}
+.hero-fach > img{left:auto;right:-6%;inset-block:6% 6%;width:58%;height:88%;object-fit:cover;
+  clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);z-index:0!important;filter:none}
+.hf-panel{color:var(--ink);text-align:left;width:min(92%,1180px)}
+.hf-inner{max-width:34rem;margin-inline:0}
+.hf-kicker{justify-content:flex-start;color:var(--accent-d)}
+.hf-title{color:var(--ink);font-size:clamp(2.3rem,1.4rem + 3.4vw,4.4rem)}
+.hf-title::after{margin:1.2rem 0 0}
+.hf-title em{color:var(--accent-d)}
+.hf-lead{margin-inline:0;text-align:left;color:var(--ink-soft)}
+.hf-phone{margin-inline:0;align-items:flex-start;color:var(--ink)}
+.hf-phone-lab{color:var(--accent-d)}
+.hf-phone-num,.hf-phone-num *{color:var(--ink);text-shadow:none}
+.hf-phone-num svg path{stroke:var(--accent-d)}
+.hf-actions{justify-content:flex-start}
+.hf-actions .btn{border-radius:999px}
+.hf-actions .btn-ghost,.hf-ghost{color:var(--ink);border-color:rgba(36,38,43,.4)}
+/* górny pasek: logo z lewej, pigułka menu na środku, telefon ze strzałką z prawej */
+.nav .nav-inner{position:relative}
+.nav .nav-toggle{position:absolute;left:50%;transform:translateX(-50%);flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  width:140px;height:54px;padding:0;border-radius:999px;background:rgba(36,38,43,.1);transition:background .3s}
+.nav .nav-toggle:hover{background:rgba(36,38,43,.18)}
+.nav .nav-toggle span{width:30px;height:2px;background:var(--ink)}
+.nav .nav-phone{margin-left:auto;border:0;padding:.4rem 0;color:var(--ink);font-size:1rem;letter-spacing:.02em;border-radius:0}
+.nav .nav-phone::after{content:" →";color:var(--accent-d)}
+.nav .nav-phone:hover{background:none;color:var(--accent-d)}
+html.menu-open .nav .nav-toggle{background:rgba(237,233,226,.14)}
+html.menu-open .nav .nav-toggle span{background:#EDE9E2}
+html.menu-open .nav .nav-phone{color:#EDE9E2;border:0}
+.fach-promise{margin-top:0}
+@media(max-width:900px){
+  .hero-fach{align-items:flex-end;padding-bottom:3rem}
+  .hero-fach > img{right:-30%;width:120%;height:46%;inset-block:14% auto}
+  .hf-panel{padding-top:min(52svh,26rem)}
+  .nav .nav-toggle{width:96px;height:46px}
+}
+@media(max-width:520px){.nav .nav-phone{font-size:.85rem}}
+.hf-kicker,.hf-title,.hf-lead,.hf-phone,.hf-trust{text-shadow:none}
+.nav::after{display:none}
+.hero-fach > img{background:var(--paper-2)}
+@media(max-width:900px){
+  .hf-title{font-size:clamp(1.9rem,8vw,2.6rem)}
+  .hf-kicker{font-size:.66rem;letter-spacing:.14em}
+  .hf-phone-num{font-size:1.7rem}
+  .nav .nav-phone{font-size:.8rem;margin-right:0}
+  .hf-panel{padding-top:min(46svh,22rem)}
+}
