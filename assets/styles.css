@@ -1847,3 +1847,96 @@ footer{view-transition-name:mt-foot}
 
 /* === szary tekst dociągnięty do czytelności (WCAG 4.5 na wszystkich tłach) === */
 :root{--muted:#6B665A;}
+
+/* === MOTYW WZOROWANY NA klindworthroofing.com (10.11.2026): grafit + piaskowy + krem, szeryf w nagłówkach, menu pełnoekranowe === */
+:root{
+  --paper:#EDE9E2;--paper-2:#E4DFD5;--paper-3:#DAD3C6;
+  --ink:#24262B;--ink-soft:#43464D;--muted:#5C5851;
+  --line:rgba(36,38,43,.14);
+  --accent:#AC9376;--accent-d:#735F40;--accent-soft:rgba(172,147,118,.16);
+  --dark:#24262B;
+  --font-serif:'Fraunces','Georgia',serif;
+}
+h1,h2,h3,.fu-name,.gateway .g-ttl,.brand .name{font-family:var(--font-serif);font-weight:400;letter-spacing:-.01em}
+h1,h2{letter-spacing:-.015em}
+.btn-accent,.nav .nav-links a.btn-accent,.btn-accent[data-accent-d],.cta-d .btn-accent{color:#24262B}
+.btn-accent:hover{background:#bda88c;color:#24262B}
+.btn{border-radius:2px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;font-size:.8rem}
+.btn-ghost{border-color:rgba(36,38,43,.35)}
+.btn-ghost:hover{border-color:var(--accent-d);color:var(--accent-d)}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:700;color:var(--accent-d)}
+.fach-promise{background:var(--dark);border-bottom:0}
+.fp-row li{color:#EDE9E2;font-family:var(--font-body);font-weight:600;letter-spacing:.16em;font-size:.74rem}
+.fp-row li:not(:last-child)::after{background:var(--accent)}
+
+/* HERO: duży napis kapitalikami, linia, krótki opis */
+.hero-fach::after{background:linear-gradient(180deg,rgba(36,38,43,.55) 0%,rgba(36,38,43,.62) 55%,rgba(36,38,43,.9) 100%)}
+.hf-panel{text-align:center}
+.hf-inner{max-width:60rem;margin-inline:auto}
+.hf-kicker{justify-content:center;color:#EDE9E2;font-family:var(--font-body)}
+.hf-kicker::before{display:none}
+.hf-title{font-family:var(--font-serif);font-weight:400;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+.hf-title em{color:var(--accent);font-style:normal}
+.hf-title::after{content:"";display:block;width:84px;height:1px;background:var(--accent);margin:1.2rem auto 0}
+.hf-lead{margin-inline:auto;text-align:center;max-width:40rem}
+.hf-phone{margin-inline:auto;align-items:center}
+.hf-actions{justify-content:center}
+.hf-phone-num{font-family:var(--font-body)}
+
+/* „Co robimy": duże karty */
+.gateway{aspect-ratio:4/5;border-radius:2px}
+.gateway::after{background:linear-gradient(180deg,rgba(36,38,43,0) 35%,rgba(36,38,43,.85))}
+.gateway .g-ttl{font-size:clamp(1.5rem,1.2rem + 1vw,2rem);padding:var(--space-6)}
+.gateway .g-ttl small{color:#EDE9E2;letter-spacing:.2em;text-transform:uppercase;font-size:.7rem;font-weight:700;opacity:1;color:var(--accent)}
+.kw-intro{max-width:46rem;margin:0 0 var(--space-7)}
+.kw-intro p{color:var(--ink-soft);font-size:var(--text-lg);line-height:1.6}
+
+/* Usługi jako trzy karty */
+.fach-uslugi .fu-list{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);margin-top:var(--space-7)}
+.fach-uslugi .fu-row{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-3);background:var(--paper-2);border:0;border-top:2px solid var(--accent);padding:var(--space-6);border-radius:0}
+.fach-uslugi .fu-row:last-child{border-bottom:0}
+.fach-uslugi .fu-row::before{display:none}
+.fach-uslugi .fu-name{font-size:1.5rem;line-height:1.2}
+.fach-uslugi .fu-desc{flex:1}
+.fach-uslugi .fu-cta{color:var(--accent-d);text-transform:uppercase;letter-spacing:.14em;font-size:.74rem}
+@media(max-width:1000px){.fach-uslugi .fu-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.fach-uslugi .fu-list{grid-template-columns:1fr}}
+
+/* CTA i stopka grafitowe */
+.cta{background:var(--dark);text-align:center}
+.cta .wrap>div:first-child{max-width:44rem;margin-inline:auto}
+.cta h2{color:#EDE9E2;text-transform:uppercase;letter-spacing:.04em}
+.cta .eyebrow{justify-content:center;color:var(--accent)}
+.cta p{color:rgba(237,233,226,.8)}
+.cta .cta-actions{justify-content:center}
+.btn-light{background:var(--accent);color:#24262B}
+footer{background:#1c1e22}
+.foot-col h4{color:var(--accent);text-transform:uppercase;letter-spacing:.2em;font-size:.72rem}
+
+/* NAWIGACJA: telefon + hamburger, menu pełnoekranowe na każdej szerokości */
+.nav .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav .nav-phone{margin-left:auto;font-weight:700;font-size:.82rem;letter-spacing:.12em;color:#EDE9E2;border:1px solid rgba(237,233,226,.55);padding:.55rem 1.1rem;border-radius:2px;white-space:nowrap;position:relative;z-index:130;transition:background .3s,color .3s,border-color .3s}
+.nav .nav-phone:hover{background:var(--accent);border-color:var(--accent);color:#24262B}
+.nav.nav-solid .nav-phone{color:var(--ink);border-color:rgba(36,38,43,.4)}
+.nav.nav-solid{backdrop-filter:none;background:rgba(237,233,226,.97)}
+.nav .nav-toggle{display:flex;position:relative;z-index:130;padding:10px}
+.nav .nav-toggle span{width:28px;height:2px;transition:transform .35s,opacity .25s,background .3s}
+html.menu-open .nav .nav-toggle span{background:#EDE9E2}
+html.menu-open .nav .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+html.menu-open .nav .nav-toggle span:nth-child(2){opacity:0}
+html.menu-open .nav .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+html.menu-open .nav .nav-phone{color:#EDE9E2;border-color:rgba(237,233,226,.55)}
+html.menu-open .nav .brand-logo{position:relative;z-index:130}
+html.menu-open,html.menu-open body{overflow:hidden}
+html.menu-open .nav{transform:none!important;background:transparent}
+.nav .nav-links,.nav .nav-links:not(.open){position:fixed;inset:0;height:100vh;height:100dvh;width:100%;z-index:120;background:#24262B;
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:.2rem;padding:6rem clamp(1.5rem,9vw,9rem) 3rem;
+  transform:none;opacity:0;visibility:hidden;pointer-events:none;border:0;box-shadow:none;transition:opacity .4s ease,visibility .4s}
+.nav .nav-links.open{opacity:1;visibility:visible;pointer-events:auto}
+.nav .nav-links a:not(.btn-accent){font-family:var(--font-serif);font-weight:400;text-transform:none;letter-spacing:-.01em;font-size:clamp(2.4rem,1.6rem + 4vw,4.6rem);line-height:1.12;color:#EDE9E2;padding:.1em 0;border:0;position:static}
+.nav .nav-links a:not(.btn-accent):hover{color:var(--accent)}
+.nav .nav-links a:not(.btn-accent)::after{display:none}
+.nav .nav-links a.btn-accent{position:static;transform:none;--klocek-stoi:none;margin:2rem 0 0;background:var(--accent);border-color:var(--accent);color:#24262B;padding:.9rem 1.6rem;font-size:.82rem}
+.nav .nav-links{padding-right:clamp(1.5rem,9vw,9rem)}
+@media(max-width:680px){.nav .nav-phone{font-size:.74rem;padding:.5rem .8rem}.nav .nav-links a.btn-accent{width:auto}}
+@media(max-width:380px){.nav .nav-phone{display:none}}

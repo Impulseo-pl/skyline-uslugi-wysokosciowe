@@ -7,12 +7,15 @@
     toggle.setAttribute('aria-expanded', 'false');
     toggle.addEventListener('click', function () {
       var open = links.classList.toggle('open');
+      document.documentElement.classList.toggle('menu-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
     links.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { links.classList.remove('open'); });
+      a.addEventListener('click', function () { links.classList.remove('open'); document.documentElement.classList.remove('menu-open'); toggle.setAttribute('aria-expanded', 'false'); });
     });
   }
+
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && links) { links.classList.remove('open'); document.documentElement.classList.remove('menu-open'); } });
 
   // reveal przy scrollu
   var els = document.querySelectorAll('.reveal');
